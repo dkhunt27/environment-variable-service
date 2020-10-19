@@ -1,0 +1,18 @@
+
+logs
+*.log
+npm-debug.log*
+node_modules/
+.coverage/
+.test-results/
+dist/
+.idea/
+.npm
+.eslintcache
+.DS_Store
+
+# yarn2
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*

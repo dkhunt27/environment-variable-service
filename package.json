@@ -1,0 +1,48 @@
+{
+  "name": "environment-variable-service",
+  "version": "0.1.0",
+  "description": "A service to get environment variables in a more consistent and testable manor.",
+  "author": "dkhunt27@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkhunt27/environment-variable-service.git"
+  },
+  "license": "MIT",
+  "main": "dist/src/index.js",
+  "files": [
+    "dist/**/*",
+    "package.json",
+    "README.md",
+    "yarn.lock",
+    ".yarnrc"
+  ],
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build:watch": "yarn tsc -w -p tsconfig.release.json",
+    "build": "rm -rf dist && yarn tsc -p tsconfig.release.json",
+    "lint:nofix": "yarn eslint . --ext .ts",
+    "lint": "yarn eslint . --ext .ts --fix",
+    "test:coverage": "yarn jest --coverage",
+    "test:watch": "yarn jest --watch",
+    "test": "yarn jest"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/jest": "~26.0.14",
+    "@types/node": "~12.12.67",
+    "@typescript-eslint/eslint-plugin": "~4.4.1",
+    "@typescript-eslint/parser": "~4.4.1",
+    "eslint": "~7.11.0",
+    "eslint-config-prettier": "~6.12.0",
+    "eslint-plugin-jest": "~24.1.0",
+    "jest": "~26.5.3",
+    "prettier": "~2.1.2",
+    "ts-jest": "~26.4.1",
+    "tsutils": "~3.17.0",
+    "typescript": "~4.0.3"
+  },
+  "gitHooks": {
+    "pre-push": "NODE_ENV='production' yarn lint:nofix"
+  }
+}
