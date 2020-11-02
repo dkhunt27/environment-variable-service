@@ -1,8 +1,7 @@
-name: Main
+name: Release
 
 on:
   push:
-    branches: [ main ]
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
@@ -16,8 +15,6 @@ jobs:
         run: yarn test
       - name: Lint
         run: yarn lint:nofix
-      - name: Build
-        run: yarn build
       - name: Changelog
         uses: scottbrenner/generate-changelog-action@master
         id: Changelog
@@ -34,4 +31,8 @@ jobs:
           body: |
             ${{ steps.Changelog.outputs.changelog }}
           draft: true
-          prerelease: true
+          prerelease: false
+      - name: Build and Publish Release
+        run: |
+          yarn build
+          npm publish
