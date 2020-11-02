@@ -1,6 +1,8 @@
 # environment-variable-service
 A service to get environment variables in a more consistent and testable manor.
 
+[![codecov](https://codecov.io/gh/dkhunt27/environment-variable-service/branch/main/graph/badge.svg?token=YUFV0GQYZX)](https://codecov.io/gh/dkhunt27/environment-variable-service)
+
 ## Install
 
   - If using yarn, run `yarn add environment-variable-service` 
