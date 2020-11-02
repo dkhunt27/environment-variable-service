@@ -1,6 +1,6 @@
 {
   "name": "environment-variable-service",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A service to get environment variables in a more consistent and testable manor.",
   "author": "dkhunt27@gmail.com",
   "repository": {
@@ -24,10 +24,12 @@
     "lint": "yarn eslint . --ext .ts --fix",
     "test:coverage": "yarn jest --coverage",
     "test:watch": "yarn jest --watch",
-    "test": "yarn jest"
+    "test": "yarn jest",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "~26.0.14",
     "@types/node": "~12.12.67",
@@ -36,6 +38,7 @@
     "eslint": "~7.11.0",
     "eslint-config-prettier": "~6.12.0",
     "eslint-plugin-jest": "~24.1.0",
+    "generate-changelog": "^1.8.0",
     "jest": "~26.5.3",
     "prettier": "~2.1.2",
     "ts-jest": "~26.4.1",
