@@ -1,3 +1,9 @@
+#### 0.4.1 (2020-11-02)
+
+##### Bug Fixes
+
+*  pipeline ([d521f4f8](https://github.com/dkhunt27/environment-variable-service/commit/d521f4f85e41977e97dada989d5f74d7e5b00aeb))
+
 ### 0.4.0 (2020-11-02)
 
 ##### Bug Fixes
