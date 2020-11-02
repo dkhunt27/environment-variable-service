@@ -16,13 +16,18 @@ import { EnvironmentVariableService } from 'environment-variable-service';
 
 const envVarService = new EnvironmentVariableService();
 
-const var1 = envVarService.getEnvironmentVariable('ENV_VAR_1'); # get env var; if doesn't exist, return null
-const var2 = envVarService.getEnvironmentVariableWithDefault('ENV_VAR_2'); # get env var; if doesn't exist, return default value
-const var3 = envVarService.mustGetEnvironmentVariable('ENV_VAR_3'); # get env var; if doesn't exist, throw error
+# get env var; if doesn't exist, return undefined
+const var1 = envVarService.getEnvironmentVariable('ENV_VAR_1'); 
+
+# get env var; if doesn't exist, return default value
+const var2 = envVarService.getEnvironmentVariableWithDefault('ENV_VAR_2'); 
+
+# get env var; if doesn't exist, throw error
+const var3 = envVarService.mustGetEnvironmentVariable('ENV_VAR_3'); 
 ```
 
 ## getEnvironmentVariable
-Gets the requested environment variable returning null if doesn't exist
+Gets the requested environment variable returning undefined if doesn't exist
 ```
 const envVarService = new EnvironmentVariableService();
 const var1 = envVarService.getEnvironmentVariable('ENV_VAR_1'); 
