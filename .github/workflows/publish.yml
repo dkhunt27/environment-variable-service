@@ -1,8 +1,8 @@
 name: Publish
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [ main ]
 
 jobs:
   publish:
@@ -16,8 +16,10 @@ jobs:
         run: yarn lint:nofix
       - name: Build and Publish Release
         run: yarn build
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+      - if: steps.publish.outputs.type != 'none'
+        run: |
+          echo "Version published to npm: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
 
-# https://sergiodxa.com/articles/github-actions-npm-publish
