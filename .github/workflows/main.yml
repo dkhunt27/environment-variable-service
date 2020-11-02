@@ -1,0 +1,21 @@
+name: Main
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install
+        run: yarn install
+      - name: Test
+        run: yarn test
+      - name: Lint
+        run: yarn lint:nofix
+      - name: Build
+        run: yarn build
+      - name: Publish
+        run: npm publish
