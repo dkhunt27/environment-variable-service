@@ -1,3 +1,9 @@
+#### 0.3.1 (2020-11-02)
+
+##### Other Changes
+
+*  updated readme ([2ebc4895](https://github.com/dkhunt27/environment-variable-service/commit/2ebc48959131ec1f97e59b902d3a30860f9b7b21))
+
 ### 0.3.0 (2020-11-02)
 
 ##### New Features
