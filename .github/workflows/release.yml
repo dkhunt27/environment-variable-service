@@ -32,7 +32,3 @@ jobs:
             ${{ steps.Changelog.outputs.changelog }}
           draft: true
           prerelease: false
-      - name: Build and Publish Release
-        run: |
-          yarn build
-          npm publish
