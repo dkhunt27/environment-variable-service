@@ -1,8 +1,8 @@
 name: Publish
 
 on:
-  push:
-    branches: [ main ]
+  release:
+    types: [published]
 
 jobs:
   publish:
@@ -15,6 +15,9 @@ jobs:
       - name: Lint
         run: yarn lint:nofix
       - name: Build and Publish Release
-        run: |
-          yarn build
-          npm publish
+        run: yarn build
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+# https://sergiodxa.com/articles/github-actions-npm-publish
