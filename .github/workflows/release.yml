@@ -30,5 +30,5 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             ${{ steps.Changelog.outputs.changelog }}
-          draft: true
+          draft: false
           prerelease: false
