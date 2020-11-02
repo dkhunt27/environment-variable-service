@@ -15,8 +15,6 @@ const envVarService = new EnvironmentVariableService();
 const var1 = envVarService.getEnvironmentVariable('ENV_VAR_1'); # get env var; if doesn't exist, return null
 const var2 = envVarService.getEnvironmentVariableWithDefault('ENV_VAR_2'); # get env var; if doesn't exist, return default value
 const var3 = envVarService.mustGetEnvironmentVariable('ENV_VAR_3'); # get env var; if doesn't exist, throw error
-
-
 ```
 
 ## getEnvironmentVariable
