@@ -43,6 +43,6 @@ const var3 = envVarService.mustGetEnvironmentVariable('ENV_VAR_3');
 ## Publishing
 - Make changes
 - Create git commit using feat: for new features or fix: for updates
-- Run release:major, release:minor, release:patch for appropriate update (this will bump version number appropriately)
-- Git push, make pr, approve
-- This will publish new package
+- Run yarn release:major, release:minor, release:patch for appropriate update (this will bump version number appropriately)
+  - This will create the git release and then publish to npm
+- Make PR back to main
