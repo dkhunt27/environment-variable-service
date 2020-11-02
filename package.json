@@ -1,6 +1,6 @@
 {
   "name": "environment-variable-service",
-  "version": "0.6.3",
+  "version": "0.7.0",
   "description": "A service to get environment variables in a more consistent and testable manor.",
   "author": "dkhunt27@gmail.com",
   "repository": {
