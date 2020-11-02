@@ -1,3 +1,13 @@
+### 0.6.0 (2020-11-02)
+
+##### New Features
+
+*  more pipeline work ([9327b79e](https://github.com/dkhunt27/environment-variable-service/commit/9327b79e159324a4fe8bd158226bc4850f383f08))
+
+##### Other Changes
+
+*  readme cleanup ([9247ff38](https://github.com/dkhunt27/environment-variable-service/commit/9247ff381f79ba6672af001a5990f2414fac1fe2))
+
 ### 0.5.0 (2020-11-02)
 
 ##### New Features
