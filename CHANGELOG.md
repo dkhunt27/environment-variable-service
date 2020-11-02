@@ -1,3 +1,31 @@
+### 0.5.0 (2020-11-02)
+
+##### New Features
+
+*  new pipeline for publish ([e67659e4](https://github.com/dkhunt27/environment-variable-service/commit/e67659e457b2e2df4ca952c78e8a96bbbd683d11))
+
+#### 0.4.1 (2020-11-02)
+
+##### Bug Fixes
+
+*  pipeline ([d521f4f8](https://github.com/dkhunt27/environment-variable-service/commit/d521f4f85e41977e97dada989d5f74d7e5b00aeb))
+
+### 0.4.0 (2020-11-02)
+
+##### Bug Fixes
+
+*  pipeline ([5e904516](https://github.com/dkhunt27/environment-variable-service/commit/5e9045162c712beceff99d223829291cea97f07f))
+
+##### Other Changes
+
+*  fix install line ([6c80b621](https://github.com/dkhunt27/environment-variable-service/commit/6c80b62112481308124116e2e0594b183a58eb25))
+
+### 0.4.0 (2020-11-02)
+
+##### Bug Fixes
+
+*  pipeline ([5e904516](https://github.com/dkhunt27/environment-variable-service/commit/5e9045162c712beceff99d223829291cea97f07f))
+
 #### 0.3.1 (2020-11-02)
 
 ##### Other Changes

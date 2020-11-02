@@ -1,0 +1,20 @@
+name: Publish
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: bahmutov/npm-install@v1
+      - name: Test
+        run: yarn test
+      - name: Lint
+        run: yarn lint:nofix
+      - name: Build and Publish Release
+        run: |
+          yarn build
+          npm publish
