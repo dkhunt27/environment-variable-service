@@ -1,3 +1,9 @@
+#### 0.6.3 (2020-11-02)
+
+##### Other Changes
+
+* //github.com/dkhunt27/environment-variable-service into wip ([3a140068](https://github.com/dkhunt27/environment-variable-service/commit/3a140068e86c0594676705b018205d636527985a))
+
 #### 0.6.2 (2020-11-02)
 
 ##### Bug Fixes
