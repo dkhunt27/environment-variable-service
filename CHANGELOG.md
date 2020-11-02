@@ -1,3 +1,9 @@
+### 0.5.0 (2020-11-02)
+
+##### New Features
+
+*  new pipeline for publish ([e67659e4](https://github.com/dkhunt27/environment-variable-service/commit/e67659e457b2e2df4ca952c78e8a96bbbd683d11))
+
 #### 0.4.1 (2020-11-02)
 
 ##### Bug Fixes
