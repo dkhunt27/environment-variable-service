@@ -4,6 +4,16 @@
 
 *  pipeline ([5e904516](https://github.com/dkhunt27/environment-variable-service/commit/5e9045162c712beceff99d223829291cea97f07f))
 
+##### Other Changes
+
+*  fix install line ([6c80b621](https://github.com/dkhunt27/environment-variable-service/commit/6c80b62112481308124116e2e0594b183a58eb25))
+
+### 0.4.0 (2020-11-02)
+
+##### Bug Fixes
+
+*  pipeline ([5e904516](https://github.com/dkhunt27/environment-variable-service/commit/5e9045162c712beceff99d223829291cea97f07f))
+
 #### 0.3.1 (2020-11-02)
 
 ##### Other Changes
