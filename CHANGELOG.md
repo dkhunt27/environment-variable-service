@@ -1,3 +1,10 @@
+#### 0.6.2 (2020-11-02)
+
+##### Bug Fixes
+
+*  dummy change ([e475c0bb](https://github.com/dkhunt27/environment-variable-service/commit/e475c0bb8766233cfe4e99fcd47bfaa9088e6102))
+*  more pipeline work ([3ab25576](https://github.com/dkhunt27/environment-variable-service/commit/3ab25576c65966f323efb1e033ad2f5edc164fbe))
+
 #### 0.6.1 (2020-11-02)
 
 ##### Other Changes
