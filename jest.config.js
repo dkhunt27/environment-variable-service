@@ -13,12 +13,7 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{ts,tsx,js,jsx}',
     '!src/**/*.d.ts',
-  ],
-  coveragePathIgnorePatterns: [
-    'node_modules',
-    '<rootDir>/src/interfaces/index.ts',
-    '<rootDir>/src/services/index.ts',
-    '<rootDir>/src/index.ts'
+    '!src/**/index.ts',
   ],
   coverageThreshold: {
     global: {
