@@ -12,9 +12,7 @@ A service to get environment variables in a more consistent and testable manor.
 
 ## Usage
 ```
-import { EnvironmentVariableService } from 'environment-variable-service';
-
-const envVarService = new EnvironmentVariableService();
+import { envVarService } from 'environment-variable-service';
 
 # get env var; if doesn't exist, return undefined
 const var1 = envVarService.getEnvironmentVariable('ENV_VAR_1'); 
