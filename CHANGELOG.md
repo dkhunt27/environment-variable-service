@@ -1,3 +1,13 @@
+### 1.1.0 (2020-11-06)
+
+##### New Features
+
+*  exposed newed service directly (envVarService) ([debf95d1](https://github.com/dkhunt27/environment-variable-service/commit/debf95d1f01742b282dac2c39f49c810f2b05c1f))
+
+##### Other Changes
+
+*  updated jest config ([6637a69d](https://github.com/dkhunt27/environment-variable-service/commit/6637a69d8c017eee3eef682eaddaf98dc0808959))
+
 ## 1.0.0 (2020-11-02)
 
 ##### New Features
