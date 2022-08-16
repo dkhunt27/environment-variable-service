@@ -1,5 +1,5 @@
 # environment-variable-service
-A service to get environment variables in a more consistent and testable manor.
+A service to get environment variables in a more consistent and testable way.
 
 [![GitHub release](https://img.shields.io/github/release/dkhunt27/environment-variable-service.svg)](https://github.com/dkhunt27/environment-variable-service/releases/)
 [![codecov](https://codecov.io/gh/dkhunt27/environment-variable-service/branch/main/graph/badge.svg?token=YUFV0GQYZX)](https://codecov.io/gh/dkhunt27/environment-variable-service)
