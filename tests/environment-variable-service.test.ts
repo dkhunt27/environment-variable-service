@@ -49,6 +49,25 @@ describe('services/environment-variable-service.ts test', () => {
         expect(() => sut.mustGetEnvironmentVariable('NON_EXISTENT_VAR')).toThrowError('Missing environment variable: NON_EXISTENT_VAR');
       });
     });
+    describe('mustGetEnvironmentVariables', () => {
+      it('when env var exists, returns that variable', () => {
+        process.env.VAR_A = 'varA';
+        process.env.VAR_B = 'varB';
+        process.env.VAR_C = 'varC';
+        const actual = sut.mustGetEnvironmentVariables(['VAR_A', 'VAR_B', 'VAR_C']);
+        expect(actual).toStrictEqual(['varA', 'varB', 'varC']);
+        delete process.env.VAR_A;
+        delete process.env.VAR_B;
+        delete process.env.VAR_C;
+      });
+      it('when env var missing, throw error', () => {
+        process.env.VAR_A = 'varA';
+        process.env.VAR_B = 'varB';
+        expect(() => sut.mustGetEnvironmentVariables(['VAR_A', 'VAR_B', 'NON_EXISTENT_VAR', 'NON_EXISTENT_VAR2'])).toThrowError('Missing environment variable: NON_EXISTENT_VAR');
+        delete process.env.VAR_A;
+        delete process.env.VAR_B;
+      });
+    });
 
     describe('get', () => {
       it('when no default and env var exists, returns that variable', () => {
@@ -72,16 +91,56 @@ describe('services/environment-variable-service.ts test', () => {
         expect(actual).toBe('defaultVal');
       });
     });
+    describe('getAll', () => {
+      it('when all env var exists, returns those variables', () => {
+        process.env.VAR_A = 'varA';
+        process.env.VAR_B = 'varB';
+        process.env.VAR_C = 'varC';
+        const actual = sut.getAll(['VAR_A', 'VAR_B', 'VAR_C']);
+        expect(actual).toStrictEqual(['varA', 'varB', 'varC']);
+        delete process.env.VAR_A;
+        delete process.env.VAR_B;
+        delete process.env.VAR_C;
+      });
+      it('when an env var missing, returns undefined for that variable', () => {
+        process.env.VAR_A = 'varA';
+        process.env.VAR_C = 'varC';
+        const actual = sut.getAll(['VAR_A', 'NON_EXISTENT_VAR', 'VAR_C']);
+        expect(actual).toStrictEqual(['varA', undefined, 'varC']);
+        delete process.env.VAR_A;
+        delete process.env.VAR_C;
+      });
+    });
 
-    describe('required', () => {
+    describe('mustGet', () => {
       it('when env var exists, returns that variable', () => {
         process.env.VAR_A = 'varA';
-        const actual = sut.required('VAR_A');
+        const actual = sut.mustGet('VAR_A');
         expect(actual).toBe('varA');
         delete process.env.VAR_A;
       });
       it('when env var missing, throw error', () => {
-        expect(() => sut.required('NON_EXISTENT_VAR')).toThrowError('Missing environment variable: NON_EXISTENT_VAR');
+        expect(() => sut.mustGet('NON_EXISTENT_VAR')).toThrowError('Missing environment variable: NON_EXISTENT_VAR');
+      });
+    });
+
+    describe('mustGetAll', () => {
+      it('when env var exists, returns that variable', () => {
+        process.env.VAR_A = 'varA';
+        process.env.VAR_B = 'varB';
+        process.env.VAR_C = 'varC';
+        const actual = sut.mustGetAll(['VAR_A', 'VAR_B', 'VAR_C']);
+        expect(actual).toStrictEqual(['varA', 'varB', 'varC']);
+        delete process.env.VAR_A;
+        delete process.env.VAR_B;
+        delete process.env.VAR_C;
+      });
+      it('when env var missing, throw error', () => {
+        process.env.VAR_A = 'varA';
+        process.env.VAR_B = 'varB';
+        expect(() => sut.mustGetAll(['VAR_A', 'VAR_B', 'NON_EXISTENT_VAR', 'NON_EXISTENT_VAR2'])).toThrowError('Missing environment variable: NON_EXISTENT_VAR');
+        delete process.env.VAR_A;
+        delete process.env.VAR_B;
       });
     });
   });

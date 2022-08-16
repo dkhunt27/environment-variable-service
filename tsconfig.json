@@ -20,5 +20,5 @@
     "experimentalDecorators": true,
     "declaration": true
   },
-  "include": ["src/**/*", "tests/**/*", "e2e/**/*", "environment-variable-service.test copy.ts"]
+  "include": ["src/**/*", "tests/**/*"]
 }

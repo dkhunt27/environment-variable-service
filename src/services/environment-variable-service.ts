@@ -24,7 +24,27 @@ export class EnvironmentVariableService implements IEnvironmentVariableService {
     }
   }
 
-  public required(variableName: string): string {
+  public mustGet(variableName: string): string {
     return this.mustGetEnvironmentVariable(variableName);
+  }
+
+  public getEnvironmentVariables(variables: string[]): string[] {
+    return variables.map((item) => {
+      return this.getEnvironmentVariable(item);
+    });
+  }
+
+  public getAll(variables: string[]): string[] {
+    return this.getEnvironmentVariables(variables);
+  }
+
+  public mustGetEnvironmentVariables(variables: string[]): string[] {
+    return variables.map((item) => {
+      return this.mustGetEnvironmentVariable(item);
+    });
+  }
+
+  public mustGetAll(variables: string[]): string[] {
+    return this.mustGetEnvironmentVariables(variables);
   }
 }

@@ -29,7 +29,7 @@ const var2 = envVarService.get('ENV_VAR_2', 'foobar');
 # get env var; if doesn't exist, throw error
 const var3 = envVarService.mustGetEnvironmentVariable('ENV_VAR_3');
 #or
-const var3 = envVarService.required('ENV_VAR_3');
+const var3 = envVarService.mustGet('ENV_VAR_3');
 
 ```
 
@@ -56,6 +56,16 @@ const var1 = envVarService.getEnvironmentVariable('ENV_VAR_1');
 const var1 = envVarService.get('ENV_VAR_1');
 ```
 
+## getEnvironmentVariables or getAll
+
+Gets the requested list of environment variables returning undefined for any that don't exist
+
+```js
+const [var1, var2, var3] = envVarService.getEnvironmentVariables(['ENV_VAR_1', 'ENV_VAR_2', 'ENV_VAR_3']);
+// or getAll
+const [var1, var2, var3] = envVarService.getAll(['ENV_VAR_1', 'ENV_VAR_2', 'ENV_VAR_3']);
+```
+
 ## getEnvironmentVariableWithDefault or get with a default
 
 Gets the requested environment variable returning the default value if doesn't exist
@@ -66,14 +76,24 @@ const var2 = envVarService.getEnvironmentVariableWithDefault('ENV_VAR_2', 'fooba
 const var2 = envVarService.get('ENV_VAR_2', 'foobar');
 ```
 
-## mustGetEnvironmentVariable
+## mustGetEnvironmentVariable or mustGet
 
 Gets the requested environment variable throwing a `Missing environment variable: ${variableName}` error if doesn't exist
 
 ```js
 const var3 = envVarService.mustGetEnvironmentVariable('ENV_VAR_3');
-// or required
-const var3 = envVarService.required('ENV_VAR_3');
+// or mustGet
+const var3 = envVarService.mustGet('ENV_VAR_3');
+```
+
+## mustGetEnvironmentVariables or mustGetAll
+
+Gets the list of requested environment variables throwing a `Missing environment variable: ${variableName}` error if one doesn't exist (all must exist otherwise, will throw error for first var that doesn't exist)
+
+```js
+const [var1, var2, var3] = envVarService.mustGetEnvironmentVariables(['ENV_VAR_1', 'ENV_VAR_2', 'ENV_VAR_3']);
+// or mustGet
+const [var1, var2, var3] = envVarService.mustGetAll(['ENV_VAR_1', 'ENV_VAR_2', 'ENV_VAR_3']);
 ```
 
 ## Publishing
