@@ -1,3 +1,9 @@
+### 1.2.0 (2022-08-16)
+
+##### New Features
+
+*  added shorthand method names; bumped libs ([fe0d87b3](https://github.com/dkhunt27/environment-variable-service/commit/fe0d87b3d6e00cfb86f442fb0616764094c27908))
+
 ### 1.1.0 (2020-11-06)
 
 ##### New Features
