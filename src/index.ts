@@ -3,5 +3,3 @@ import { EnvironmentVariableService } from './services/environment-variable-serv
 export * from './interfaces';
 export * from './services';
 export const envVarService = new EnvironmentVariableService();
-
-

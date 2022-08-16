@@ -6,7 +6,7 @@ export class EnvironmentVariableService implements IEnvironmentVariableService {
   }
 
   public getEnvironmentVariableWithDefault(variableName: string, defaultValue: string): string {
-    return process.env[variableName] ? process.env[variableName] :  defaultValue;
+    return process.env[variableName] ? process.env[variableName] : defaultValue;
   }
 
   public mustGetEnvironmentVariable(variableName: string): string {
@@ -14,5 +14,17 @@ export class EnvironmentVariableService implements IEnvironmentVariableService {
       throw new Error(`Missing environment variable: ${variableName}`);
     }
     return process.env[variableName];
+  }
+
+  public get(variableName: string, defaultValue?: string): string {
+    if (typeof defaultValue !== 'undefined') {
+      return this.getEnvironmentVariableWithDefault(variableName, defaultValue);
+    } else {
+      return this.getEnvironmentVariable(variableName);
+    }
+  }
+
+  public required(variableName: string): string {
+    return this.mustGetEnvironmentVariable(variableName);
   }
 }
