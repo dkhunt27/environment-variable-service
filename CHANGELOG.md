@@ -1,3 +1,9 @@
+### 1.3.0 (2022-08-16)
+
+##### New Features
+
+*  added support for getting/must getting list of vars; fixed lint issues ([42c272a8](https://github.com/dkhunt27/environment-variable-service/commit/42c272a807be9da516533ca0497522346f477089))
+
 ### 1.2.0 (2022-08-16)
 
 ##### New Features
