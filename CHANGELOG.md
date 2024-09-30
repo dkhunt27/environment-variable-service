@@ -1,3 +1,9 @@
+## 2.0.0 (2024-09-30)
+
+##### New Features
+
+*  added number support ([ff4b2f62](https://github.com/dkhunt27/environment-variable-service/commit/ff4b2f620a32792802b21a671062c7358876088f))
+
 ### 1.3.0 (2022-08-16)
 
 ##### New Features
